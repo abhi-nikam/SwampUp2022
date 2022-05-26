@@ -4,7 +4,7 @@ resources:
     type: GitRepo
     configuration:
       gitProvider: github
-      path: shivaraman83/SwampUp2022
+      path: abhi-nikam/SwampUp2022
       branches:
         include: main
 
