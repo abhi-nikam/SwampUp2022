@@ -20,8 +20,8 @@ pipelines:
             - add_pipeline_variables appVersion="${appVersion}"
             - add_pipeline_variables subPath="${res_source_code_branchName}/${appVersion}"
             - mkdir -p $shared_workspace/npmBuildInputGitRepo
-            - cp -TRv $shared_workspace $steplet_run_state_dir/npmBuildInputGitRepo
-            - rm -rf $steplet_run_state_dir/npmBuildInputGitRepo/*
+            - cp -r $res_source_code_resourcePath/* $shared_workspace/npmBuildInputGitRepo/
+            - rm -rf $steplet_run_state_dir/npmBuildInputGitRepo
 
       - name: npm_package_frontend
         type: Bash
